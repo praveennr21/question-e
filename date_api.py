@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/date', methods=['GET'])
 def get_date():
+    
     i = datetime.now()
     tz = pytz.timezone('US/Eastern')
     date = tz.localize(i)
